@@ -1,0 +1,92 @@
+.checkbox {
+  /* outline: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox span {
+  outline: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  /* outline: 1px solid red; */
+
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.content-container div {
+  /* outline: green 1px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container p {
+  /* outline: 1px solid blue; */
+  font-size: 16px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+/* progress bar */
+.progress-bar-container {
+  /* outline: 1px solid red; */
+  width: 200px;
+}
+
+.progress-bar {
+  position: relative;
+  border: 8px solid #efefef;
+  border-radius: 30px;
+  height: 25px;
+  width: 180px;
+}
+
+.right-container {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.chevron-down,
+.checkbox-icon {
+  cursor: pointer;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 45px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.tasks-container span {
+  /* outline: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+
+.tasks-container p {
+  font-size: 10px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.2px;
+  color: #818181;
+}
+
+.unchecked {
+  color: #535559;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.topbar {
+  /* outline: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0 0 20px;
+}
+
+.topbar span {
+  margin: 0 3px 0 3px;
+}
+
+.topbar p {
+  font-weight: 500;
+}
+
+.task-count-circle {
+  height: 25px;
+  width: 25px;
+  background-color: var(--darkblue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-count {
+  color: white;
+  font-size: 0.4rem;
+  font-weight: 400;
+}
+
+.dots {
+  padding: 0 5px 0 5px;
+}
+
+.dots span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

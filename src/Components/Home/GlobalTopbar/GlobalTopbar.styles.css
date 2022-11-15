@@ -1,0 +1,31 @@
+.background {
+  background-color: var(--darkblue);
+  width: 100%;
+  height: 6.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  padding: 0 1.5rem;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  background-color: var(--lightblue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.initials {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
