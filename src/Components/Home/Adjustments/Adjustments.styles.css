@@ -1,23 +1,17 @@
 .adjustments-container {
-  /* outline: 1px solid green; */
+  /* outline: 1px solid blue; */
   height: 20px;
   display: flex;
   margin-bottom: 6px;
 }
 
 .adjustments-alignment {
+  /* outline: 1px solid red; */
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-left: auto;
   margin-right: 20px;
-}
-
-.adjustments-alignment button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 6px;
-  max-width: 250px;
 }
 
 .adjustments-alignment p {
