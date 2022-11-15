@@ -1,5 +1,6 @@
 import './Adjustments.styles.css';
-import SearchButton from './Search Button/SearchButton';
+import SearchButton from './SearchButton/SearchButton';
+import SortButton from './SortButton/SortButton';
 
 const Adjustments = () => {
   return (
@@ -10,9 +11,7 @@ const Adjustments = () => {
             <p>All Tasks</p>
           </button>
 
-          <button className='sorting'>
-            <p>Sort</p>
-          </button>
+          <SortButton />
 
           <SearchButton />
         </div>
