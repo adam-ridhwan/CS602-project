@@ -7,31 +7,32 @@ const SearchButton = () => {
   const [isDisabled, setIsDisabled] = useState(false);
   const inputRef = useRef();
 
+  // handle focus on search bar
   useEffect(() => {
     if (isSearchBarVisible) {
       inputRef.current.focus();
     }
   }, [isSearchBarVisible]);
 
+  // handle check for visible search and text
   useEffect(() => {
     isSearchBarVisible ? setIsDisabled(true) : setIsDisabled(false);
   }, [isSearchBarVisible, isDisabled]);
 
+  // handle focus and defocus
   const handleFocus = () => {
     setIsSearchBarVisible(!isSearchBarVisible);
   };
 
+  // handle click outside of search bar
   const handleDefocus = () => {
     if (inputRef.current.value) return;
-
     setTimeout(() => {
       setIsSearchBarVisible(false);
     }, 600);
   };
 
-  useEffect(() => {
-    console.log(isSearchBarVisible);
-  });
+  // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 
   return (
     <>
