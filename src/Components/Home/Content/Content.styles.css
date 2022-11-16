@@ -36,25 +36,6 @@
   font-weight: 600;
 }
 
-/* progress bar */
-.progress-bar-container {
-  /* outline: 1px solid red; */
-  width: 200px;
-}
-
-.progress-bar {
-  position: relative;
-  border: 8px solid #efefef;
-  border-radius: 30px;
-  height: 25px;
-  width: 180px;
-}
-
-.right-container {
-  margin-left: auto;
-  margin-right: 20px;
-}
-
 .chevron-down,
 .checkbox-icon {
   cursor: pointer;

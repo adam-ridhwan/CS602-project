@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+
 import './Content.styles.css';
 
 const Adam = {
@@ -17,25 +17,6 @@ const Adam = {
   read: {},
 };
 
-const percentage = 80; // delete this one after database
-
-const progress = keyframes`
-  0% { width: 0; }
-  100% { width: ${percentage}%; }
-}
-`;
-
-const ProgressBar = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #a3db44;
-  border-radius: 30px;
-  height: 9px;
-  animation: ${progress} 1.5s ease-in-out;
-  animation-fill-mode: both;
-`;
-
 const Content = () => {
   return (
     <>
@@ -49,7 +30,7 @@ const Content = () => {
       />
 
       {/* Content */}
-      {Object.keys(Adam).map((group, index) => {
+      {Object.keys(Adam).map((section, index) => {
         return (
           <div key={index}>
             <div className='content-container'>
@@ -61,22 +42,13 @@ const Content = () => {
                 <span>{chevronDown}</span>
               </div>
 
-              <p>{group}</p>
+              <p>{section}</p>
 
-              <div className='right-container'>
-                {/* Progress Bar */}
-                <div className='progress-bar-container'>
-                  <div className='progress-bar'>
-                    <ProgressBar></ProgressBar>
-                  </div>
-                </div>
-
-                <span>{dots}</span>
-              </div>
+              <span>{dots}</span>
             </div>
 
             {/* tasks */}
-            {Object.entries(Adam[group]).map(([task, value], subindex) => {
+            {Object.entries(Adam[section]).map(([task, value], subindex) => {
               return (
                 <div key={subindex} className={'tasks-container'}>
                   <span className='checkbox-icon'>
