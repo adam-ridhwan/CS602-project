@@ -57,6 +57,7 @@ const SortButton = () => {
               height: '2px',
               backgroundColor: 'rgb(244,244,244)',
               border: 'none',
+              width: '100%',
               margin: '7.5px 0',
             }}
           />
