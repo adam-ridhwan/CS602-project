@@ -1,12 +1,8 @@
-import { useEffect, useReducer, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './SortButton.styles.css';
 
 const SortButton = () => {
   const [isSortDrpdwnOpen, setIsSortDrpdwnOpen] = useState(false);
-  const [isAscendingHovered, setIsAscendingHOvered] = useState(false);
-  const [isDescendingHovered, setIsDescendingHOvered] = useState(false);
-  const [isRemoveHovered, setIsRemoveHOvered] = useState(false);
-  const [chosenSortSelection, setIsChosenSortSelection] = useState();
   const sortBtnRef = useRef();
 
   // check to see if mouse is clicked outside of sort button
