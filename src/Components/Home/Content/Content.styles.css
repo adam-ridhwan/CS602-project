@@ -6,7 +6,6 @@
 }
 
 .checkbox span {
-  outline: 1px solid blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +18,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 5px;
+  margin: 0 20px;
 }
 
 .content-container div {
@@ -69,5 +68,22 @@
 
 .unchecked {
   color: #535559;
+  cursor: pointer;
+}
+
+.add-icon {
+  /* outline: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.task-dots {
+  /* outline: 1px solid blue; */
+  height: 20px;
+  margin-left: 5px;
   cursor: pointer;
 }

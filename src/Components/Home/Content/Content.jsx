@@ -44,7 +44,9 @@ const Content = () => {
 
               <p>{section}</p>
 
-              <span>{dots}</span>
+              <span className='add-icon'>{add}</span>
+
+              <span className='task-dots'>{dots}</span>
             </div>
 
             {/* tasks */}
@@ -143,5 +145,20 @@ const dots = (
       <path d='M8,1.5A1.5,1.5,0,1,1,6.5,0,1.5,1.5,0,0,1,8,1.5Z'></path>
       <path d='M13,1.5A1.5,1.5,0,1,1,11.5,0,1.5,1.5,0,0,1,13,1.5Z'></path>
     </g>
+  </svg>
+);
+
+const add = (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    style={{
+      width: '20px',
+      height: '20px',
+      fill: 'rgba(106,106,106,0.5)',
+    }}
+    viewBox='0 0 24 24'
+  >
+    <path fill='none' d='M0 0h24v24H0V0z' />
+    <path d='M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z' />
   </svg>
 );
