@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 import './Topbar.styles.css';
 
 const Topbar = () => {
@@ -7,14 +8,14 @@ const Topbar = () => {
 
   // check to see if mouse is clicked outside of sort button
   useEffect(() => {
-    const allTasksBtnHandler = event => {
+    const sortBtnHandler = event => {
       if (!myTasksDots.current.contains(event.target)) {
         setIsTaskDrpdwnOpen(false);
       }
     };
-    document.addEventListener('mousedown', allTasksBtnHandler);
+    document.addEventListener('mousedown', sortBtnHandler);
     return () => {
-      document.removeEventListener('mousedown', allTasksBtnHandler);
+      document.removeEventListener('mousedown', sortBtnHandler);
     };
   });
 

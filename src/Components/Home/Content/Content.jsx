@@ -1,23 +1,38 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import './Content.styles.css';
 
-const Adam = {
-  work: {
-    'Daily standup': [true, 'Lorem ipsum'],
-    'Fix bug': [true],
-    'Mentor intern': [true],
-    'Interview candidates': [false],
-    'Launch site': [false],
-    'Buy starbucks for co-workers': [true],
+const user = [
+  {
+    id: 1,
+    section: 'work',
+    tasks: [
+      { id: 1, event: 'daily stanup', finished: true },
+      { id: 2, event: 'fix bug', finished: true },
+      { id: 3, event: 'mentor intern', finished: true },
+      { id: 4, event: 'interview candidates', finished: false },
+      { id: 5, event: 'launch site', finished: false },
+      { id: 6, event: 'buy starbucks for co-workers', finished: true },
+    ],
   },
-  clean: { 'clean kitchen': [true, 'Lorem ipsum'] },
-  groceries: {},
-  'practice instrument': {},
-  read: {},
-};
+  {
+    id: 2,
+    section: 'clean',
+    tasks: [
+      { id: 1, event: 'clean kitchen', finished: true },
+      { id: 2, event: 'fix bug', finished: false },
+    ],
+  },
+  {
+    id: 3,
+    section: 'groceries',
+    tasks: [],
+  },
+];
 
 const Content = () => {
+  // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
   return (
     <>
       <hr
@@ -30,7 +45,7 @@ const Content = () => {
       />
 
       {/* Content */}
-      {Object.keys(Adam).map((section, index) => {
+      {user.map((values, index) => {
         return (
           <div key={index}>
             <div className='content-container'>
@@ -42,21 +57,23 @@ const Content = () => {
                 <span>{chevronDown}</span>
               </div>
 
-              <p>{section}</p>
+              <p>{values.section}</p>
 
               <span className='add-icon'>{add}</span>
 
               <span className='task-dots'>{dots}</span>
             </div>
 
-            {/* tasks */}
-            {Object.entries(Adam[section]).map(([task, value], subindex) => {
+            {values['tasks'].map((subvalues, subindex) => {
               return (
                 <div key={subindex} className={'tasks-container'}>
                   <span className='checkbox-icon'>
-                    {value[0] ? checkedBox : uncheckedBox}
+                    {subvalues['finished'] ? checkedBox : uncheckedBox}
                   </span>
-                  <p className={value[0] ? 'checked' : 'unchecked'}>{task}</p>
+
+                  <p className={subvalues.finished ? 'checked' : 'unchecked'}>
+                    {subvalues.event}
+                  </p>
                 </div>
               );
             })}
